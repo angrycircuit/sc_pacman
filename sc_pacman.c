@@ -19,7 +19,6 @@ int main() {
 	int pacman_x = 0, pacman_y = 0;
 	char input = '0';
 	char input_buffer = '0';
-
 	//Create Map of size 15 - need to change this to a constant somehow without using global vars.
 	char map[15][15];
 	//Populate Map of size 15
@@ -32,7 +31,6 @@ int main() {
 	map[pacman_y][pacman_x] = 'P';
 	//Set player goal position
 	map[0][14] = 'G';
-
 	//Set variable to start game
 	int gameon = 0;
 	while (gameon == 0) {
@@ -43,12 +41,12 @@ int main() {
 			}
 			printf("\n");
 		}
-
 		//Enter Input
 		input = '0';
 		printf("Enter input, w = up, s = down, a = left, d = right: ");
 		while (input == '0') {
-			// The input_buffer is used because after entering a character there is a hidden '\n' that follows it, which causes errors. 
+			// The input_buffer is used because after entering a character there is a hidden '\n' that follows it, 
+			// which causes errors. 
 			// This is a temporary way of handling the \n to get our desired functionality
 			scanf("%c%c", &input, &input_buffer);
 			if (input != 'w' && input != 's' && input != 'a' && input != 'd') {
@@ -95,8 +93,6 @@ int main() {
 			else {
 				printf("Can't move further down!\n");
 			}
-			
-
 		}
 		if (input == 'a') {
 			//move player space left, change old space
@@ -137,7 +133,6 @@ int main() {
 			}
 		}
 	}
-
 	//Show winning map with winning message
 	printf("\n----!!!!Congratulations You WIN!!!!----\n\n");
 	for (i = 0; i < 15; i++) {
@@ -147,6 +142,5 @@ int main() {
 		printf("\n");
 	}
 	printf("\n----!!!!Congratulations You WIN!!!!----\n");
-
 	return 0;
 }
