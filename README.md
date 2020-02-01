@@ -21,4 +21,5 @@ This will create an executable file called "game" that you can run in Putty by u
 
 
 -Add notes here that need to be addressed! Please leave instructions above alone
+
 Notes:
