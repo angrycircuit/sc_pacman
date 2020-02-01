@@ -61,7 +61,7 @@ int main() {
 		if (input == 'w') {
 			//move player space up, change old space
 			//if can't move, do nothing
-			//checking to see if current x pos - 1 is out of bounds against size of map
+			//checking to see if current y pos - 1 is out of bounds against size of map
 			if (pacman_y - 1 >= 0) {
 				pacman_y -= 1;
 				//Check to see if player has won
