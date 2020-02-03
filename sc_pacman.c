@@ -45,11 +45,8 @@ int main() {
 		input = '0';
 		printf("Enter input, w = up, s = down, a = left, d = right: ");
 		while (input == '0') {
-<<<<<<< HEAD
 			// The input_buffer is used because after entering a character there is a hidden '\n' that follows it,
-=======
 			// The input_buffer is used because after entering a character there is a hidden '\n' that follows it, 
->>>>>>> 09dfe0cbcb16d98d6b851884361b2e5435341bab
 			// which causes errors. 
 			// This is a temporary way of handling the \n to get our desired functionality
 			scanf("%c%c", &input, &input_buffer);
