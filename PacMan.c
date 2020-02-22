@@ -1,3 +1,14 @@
+/*
+	TODO:
+	Title Screen Module
+	Sound Module
+	Level Generate Module
+	Start Game Module
+	Pacman Module 
+	Ghost Module
+
+	I've just listed above what I can remember from class. Feel free to add to these modules if you can think of anything. I'll add more to this soon.
+*/
 #include <stdio.h>
 
 // to use STD_OUTPUT_HANDLE 
@@ -19,6 +30,7 @@
 	each unit value specify what to display
 	1 - pacman, 2 - beans, ect.
 */
+
 int screen[HEIGHT][WIDTH] = { 0 };
 
 // pac's coordinate, y = vertical, x = horizontal
