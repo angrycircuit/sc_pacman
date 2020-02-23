@@ -1,6 +1,6 @@
 # Update on Feb. 22, 2020
 
-### Files Reorganise
+### Files Re-organisation
 - all source code can be found in `./Source Codes`
 - all dependent header files can be checked in `./Include`
 - all dependent libruaries are stored in `./Lib`
@@ -10,7 +10,7 @@
 ### OpenGL Set Up
 the example can be compiled, please check `./Source Codes/opengl.c`
 
-### Dependent files link
+### Dependent Files linking
 - all the headers and libruaries currently needed are successfully linked to the solution file
 - to add more header files, simply copy the files to `./Include`
 - to add more libruaries, follow the procedures below
