@@ -56,6 +56,6 @@ the example can be compiled, please check `./Source Codes/opengl.c`
 	- type the new lib's name in the first line on your right, and followe the same syntax
 
 ### Suggestion :D
-You can learn `markdown` to make this page look more better!
+You can learn `markdown` to make this page look better!
 
 **Leon**
