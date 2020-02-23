@@ -1,3 +1,32 @@
+# Update on Feb. 22, 2020
+
+### Files Reorganise
+- all source code can be found in `./Source Codes`
+- all dependent header files can be checked in `./Include`
+- all dependent libruaries are stored in `./Lib`
+- all source code are sorted in `./Source Code`
+- older files are backuped in `./Source Code/backup`
+
+### OpenGL Set Up
+the example can be compiled, please check `./Source Codes/opengl.c`
+
+### Dependent files link
+- all the headers and libruaries currently needed are successfully linked to the solution file
+- to add more header files, simply copy the files to `./Include`
+- to add more libruaries, follow the procedures below
+	- copy the libruary file to `./Lib`
+	- project => poperties
+	- linker => input
+	- type the new lib's name in the first line on your right, and followe the same syntax
+
+### Suggestion :D
+You can learn `markdown` to make this page look better!
+
+**Leon**
+
+---
+
+
 Hey welcome to the Pacman project! The purpose of this file is to help you get up and running as quickly as possible.
 -Matt
 
@@ -33,31 +62,3 @@ hey guys this is Adonis, I could not figure out the graphics but while I was hun
 >>>>>>> 09dfe0cbcb16d98d6b851884361b2e5435341bab
 
 ---
-
-
-
-# Update on Feb. 22, 2020
-
-### Files Reorganise
-- all source code can be found in `./Source Codes`
-- all dependent header files can be checked in `./Include`
-- all dependent libruaries are stored in `./Lib`
-- all source code are sorted in `./Source Code`
-- older files are backuped in `./Source Code/backup`
-
-### OpenGL Set Up
-the example can be compiled, please check `./Source Codes/opengl.c`
-
-### Dependent files link
-- all the headers and libruaries currently needed are successfully linked to the solution file
-- to add more header files, simply copy the files to `./Include`
-- to add more libruaries, follow the procedures below
-	- copy the libruary file to `./Lib`
-	- project => poperties
-	- linker => input
-	- type the new lib's name in the first line on your right, and followe the same syntax
-
-### Suggestion :D
-You can learn `markdown` to make this page look better!
-
-**Leon**
