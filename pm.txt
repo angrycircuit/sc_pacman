@@ -1,0 +1,39 @@
+IPC Pac Man!                       :y-         .+sh`                            
+IPC Pac Man!                     .+:om-.....:oo+--mo`                           
+IPC Pac Man!                    :/-/-+/----:o+/---od-..`                        
+                              .//hNMo-----+dMMMN:--y/----.`                     
+                            `--yMMMM/----sMMMMMM+-----------`                   
+      .-:/::-``           `---hMMMMd----+MMMMMMM/-------------`                 
+    -///::--///+:        .---:yyhNN+----mMdhyso+---------------.                
+  `/+//:---/+//+s:      .----oydNds----:MNms:::----------------:.               
+ `++//::::/+sssyy-     .-----NMN+-------mNmy:./-----------------:`              
+ -o++//+++oshhhhs     `:-----oyy:----//-:oyyo+------------------::              
+  +ossssyyyhhhhhs:    .:--------::::+o+:-----------------------::/.             
+   ./osssyysyyy/:+.   -oy+/----:++/://:----------:/+osyo-------::--.``          
+      `-oossso+/+o  `.:sMMMMNmddddddhyyyhhhddmmNMMMMMMM/------:::------..`      
+        -+ooooo+o/---://NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMy------::///:--------.`   
+          ```.-::----//:sMMMMMMMMMMMMMMMMMMMMMMMMMMMMy-----:::/+oy`..-:------`  
+               .------`-:sMMMMMMNNNNNNNNmmmmddmMMMMNo----::::/+oy:    .------   
+                 ``     -:+mMMMMmddhhhhhhhyys/dMMNy:--::::://+oyo  .::::::::    
+                         --:+dMMMmhhhhhhhhhhdNMms::::::://++osho  /++///:://.   
+                          .---:oydNNmmmmmmmdyo/:::::////+osyhho-:/:::///+++oo   
+                           `----::::////:::::::///++++ossyhhyo////:--://++oyo   
+                             `.---:------:////////oosssyyy+/++++//:--::/++o:    
+                                `.-------/yhyyysssoosso/- -++ooo//:--://++o:    
+                                   ------+sssyyyyo/:.`    /+o+/////////++oo:    
+                                /++ooo++oo/oo++yh`        -osoooo++++++ooos:    
+                                hhhhhhhhhhddm+/ohy:/-      `..+ssssssssssyy`    
+                                hhhhhhhhhhddm/:+sdNNN:         ./osyyyhhho`     
+                          `-//++hhhhhhhhhhdmmyydmmmmNm.           `.-::-`       
+                         /yhhhhyhhhhdddhhhdmNdddddddddy                         
+                        +hhhhhh-+hhhdddddddmNddhhhhhhdds                        
+                       `hhhhhhhyyhhdddmmmmmmmddhhhhhhdmms                       
+                       /hhhhhhhhhhdddmmmmmmNy:ddhhhhdmNNNo                      
+                       ./+sydmmmmmmmmmmmmmNNs/hhhhhhhmNNm-                      
+                              `-::/++oosssyyshhyyyyhhmmN/                       
+                                           .yyyyyyyhhdmy                        
+                                           shyyyyyyhhhd.                        
+                                           hhhyyhhhhhh/                         
+IPC Pac Man!                               :hhhhhhhhh+                          
+IPC Pac Man!                                `/sddddd/                           
+IPC Pac Man!                                    .-:`

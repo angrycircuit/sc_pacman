@@ -20,8 +20,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source Codes\PacMan.c">
+    <ClCompile Include="Source\opengl.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\introduction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
