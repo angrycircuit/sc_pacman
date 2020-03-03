@@ -83,19 +83,19 @@ A super basic version has been created, which includes:
 	- use rotation and flipping function
 - Draw pictures
 	- draw a better pacman picture
-	- draw ghosts' picture
-	- draw dots' picture
+	- draw ghosts' pictures
+	- draw dots' pictures
 	- draw fruits (optional)
 - Set the boundary
 	- set the wall and make the collision detection function work
 	- make the tunnel in the middle a "tunnel"
 - Create more game logic
-	- determine the consequence when pacman catched by ghosts
-	- give reactions when pacman eat dots and energizer
+	- determine the consequence when pacman is catched by ghosts
+	- give reactions when pacman eats dots and energizers
 - Apply A* algorithm to the ghosts
 
 ##### Tutorial
-I found Lazy Foo's online tutorial is quite useful and relavent easy, and I have read the first 20 sections of it.
+I found Lazy Foo's online tutorial is quite useful and relatively easy, and I have read the first 20 sections of it.
 [The tutorial can be found here.](https://lazyfoo.net/tutorials/SDL/index.php)
 
 
