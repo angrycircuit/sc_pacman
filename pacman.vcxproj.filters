@@ -20,8 +20,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source Codes\PacMan.c">
+    <ClCompile Include="Source Codes\functions.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source Codes\pacman.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Include\declaration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
