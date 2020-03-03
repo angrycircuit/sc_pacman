@@ -59,3 +59,47 @@ the example can be compiled, please check `./Source Codes/opengl.c`
 You can learn `markdown` to make this page look more better!
 
 Leon
+
+---
+
+### Update on March 2, 2020
+
+##### SDL Immigration
+Because OpenGL math libruary only work on C++, there is no way to create animation; switching to SDL is a better choice.
+
+##### About Game Version 0.0.1
+A super basic version has been created, which includes:
+- `pacman.c` - a main function source file 
+	- overall game logic designing
+	- functions encapsulating
+- `functions.c` - a separate source file to store functions
+	- handmade functions
+- `declaration.h` - a header file to store macros and prototypes
+	- simply use `extern` to import functions from `functions.c`
+	
+##### Further Improvement
+- Refine comments
+- Fix the facing direction when pacman move to another direction
+	- use rotation and flipping function
+- Draw pictures
+	- draw a better pacman picture
+	- draw ghosts' picture
+	- draw dots' picture
+	- draw fruits (optional)
+- Set the boundary
+	- set the wall and make the collision detection function work
+	- make the tunnel in the middle a "tunnel"
+- Create more game logic
+	- determine the consequence when pacman catched by ghosts
+	- give reactions when pacman eat dots and energizer
+- Apply A* algorithm to the ghosts
+
+##### Tutorial
+I found Lazy Foo's online tutorial is quite useful and relavent easy, and I have read the first 20 sections of it.
+[The tutorial can be found here.](https://lazyfoo.net/tutorials/SDL/index.php)
+
+
+
+
+
+
