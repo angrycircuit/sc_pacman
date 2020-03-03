@@ -4,6 +4,7 @@
 #include <string.h>	
 #include "declaration.h"
 
+// release the resource
 void free(SDL_Texture* texture)
 {
 	if (texture != NULL)
@@ -13,7 +14,7 @@ void free(SDL_Texture* texture)
 	}
 }
 
-// load from spritesheet and erase black
+// load from spritesheet, erase black, and return the content
 SDL_Texture* loadFromFile(SDL_Renderer* renderer, char* address[])
 {
     // initialize container
@@ -29,14 +30,17 @@ SDL_Texture* loadFromFile(SDL_Renderer* renderer, char* address[])
     // release resource
     SDL_FreeSurface(loadedSurface);
 
+    // return the processed image
     return newTexture;
 }
 
+// change the speed in each axis when a specific key pressed
 void handleEvent(struct ObjectMoveInfo* object, SDL_Event* e)
 {
+    // if a key is pressed down
     if ((*e).type == SDL_KEYDOWN && (*e).key.repeat == 0)
     {
-        //Adjust the velocity
+        // change speed in each axis
         switch ((*e).key.keysym.sym)
         {
         case SDLK_UP: object->vely = -VELOCITY; object->velx = 0; break;
@@ -45,67 +49,61 @@ void handleEvent(struct ObjectMoveInfo* object, SDL_Event* e)
         case SDLK_RIGHT: object->velx = VELOCITY; object->vely = 0; break;
         }
     }
-    //If a key was released
-    //else if ((*e).type == SDL_KEYUP && (*e).key.repeat == 0)
-    //{
-    //    //Adjust the velocity
-    //    switch ((*e).key.keysym.sym)
-    //    {
-    //    case SDLK_UP: object->vely += VELOCITY; break;
-    //    case SDLK_DOWN: object->vely -= VELOCITY; break;
-    //    case SDLK_LEFT: object->velx += VELOCITY; break;
-    //    case SDLK_RIGHT: object->velx -= VELOCITY; break;
-    //    }
-    //}
 }
 
+// change the object's position stored in ObjectMoveInfo, in order to make it move
+// use pointer structure because the member's value has to be changed
+// use "->" instead of ".", refering to the member's value
 void move(struct ObjectMoveInfo* object, SDL_Rect targetHitBox, int objWidth, int objHeight)
 {
-    //Move the dot left or right
+    // move the object left or right
+    // plus a negative value means minus
     object->posx += object->velx;
     object->hitBox.x = object->posx;
 
-    //If the dot went too far to the left or right
-    if ((object->posx < MAP_LEFT_INNER) || ((object->posx + objWidth) > MAP_RIGHT_INNER)/* || checkCollision(object->hitBox, a)*/)
+    // if the object went too far to the left or right
+    if ((object->posx < MAP_LEFT_INNER) || ((object->posx + objWidth) > MAP_RIGHT_INNER)/* || checkCollision(object->hitBox, targetHitBox)*/)
     {
-        //Move back
+        // move back
         object->posx -= object->velx;
         object->hitBox.x = object->posx;
     }
-        //Move the dot up or down
-        object->posy += object->vely;
-        object->hitBox.y = object->posy;
+    
+    // move up or down
+    object->posy += object->vely;
+    object->hitBox.y = object->posy;
 
-    //If the dot went too far up or down
-    if ((object->posy < MAP_UP_INNER) || (object->posy + objHeight > MAP_DOWN_INNER)/* || checkCollision(object->hitBox, a)*/)
+    // if the object went too far up or down
+    if ((object->posy < MAP_UP_INNER) || (object->posy + objHeight > MAP_DOWN_INNER)/* || checkCollision(object->hitBox, targetHitBox)*/)
     {
-        //Move back
+        // move back
         object->posy -= object->vely;
         object->hitBox.y= object->posy;
     }
 }
 
+// check if two objects meet
 int checkCollision(SDL_Rect a, SDL_Rect b)
 {
-    //The sides of the rectangles
+    // the sides of the rectangles
     int leftA, leftB;
     int rightA, rightB;
     int topA, topB;
     int bottomA, bottomB;
 
-    //Calculate the sides of rect A
+    // calculate the sides of rect A
     leftA = a.x;
     rightA = a.x + a.w;
     topA = a.y;
     bottomA = a.y + a.h;
 
-    //Calculate the sides of rect B
+    // calculate the sides of rect B
     leftB = b.x;
     rightB = b.x + b.w;
     topB = b.y;
     bottomB = b.y + b.h;
 
-    //If any of the sides from A are outside of B
+    // if any of the sides from A are outside of B
     if (bottomA <= topB)
         return 0;
 
@@ -118,6 +116,6 @@ int checkCollision(SDL_Rect a, SDL_Rect b)
     if (leftA >= rightB)
         return 0;
 
-    //If none of the sides from A are outside B
+    // if none of the sides from A are outside B
     return 1;
 }
