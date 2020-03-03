@@ -65,7 +65,7 @@ Leon
 ### Update on March 2, 2020
 
 ##### SDL Immigration
-Because OpenGL math libruary only work in C++, there is no way to create animation; switching to SDL is a better choice.
+Because OpenGL math library only work in C++, there is no way to create animation; switching to SDL is a better choice.
 
 ##### About Game Version 0.0.1
 A super basic version has been created, which includes:
