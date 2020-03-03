@@ -78,7 +78,7 @@ A super basic version has been created, which includes:
 	- simply use `extern` to import functions from `functions.c`
 	
 ##### Further Improvement
-- Refine comments
+- Refine comments	**✓**
 - Fix the facing direction when pacman move to another direction
 	- use rotation and flipping function
 - Draw pictures
