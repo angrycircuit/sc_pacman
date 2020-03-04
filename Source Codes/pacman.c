@@ -75,7 +75,7 @@ int main(int argc, char* args[])
 		SDL_Rect pacRenderQuad = { pacmanMoveInfo.posx, pacmanMoveInfo.posy, 40, 40 };
 
 		// render current cutting part of pac
-		SDL_Rect* currentClip = &pacmanClips[frame / 4];
+		SDL_Rect* currentClip = &pacmanClips[frame / 6];
 		SDL_RenderCopy(gRenderer, pacmanTexture, currentClip, &pacRenderQuad);
 
 		// update everything on screen once each loop
@@ -83,7 +83,7 @@ int main(int argc, char* args[])
 
 		// every 4 frames animation change once
 		++frame;
-		if (frame / 4 >= PACMAN_ANIMATION_FRAMES)
+		if (frame / 6 >= PACMAN_ANIMATION_FRAMES)
 			frame = 0;
 	}
 
@@ -125,28 +125,38 @@ void loadMedia()
 	background = SDL_CreateTextureFromSurface(gRenderer, loadedSurface);
 
 	// load pac texture
-	pacmanTexture = loadFromFile(gRenderer, "Source Files/pacmanSpriteSheet.jpg");
+	pacmanTexture = loadFromFile(gRenderer, "Source Files/characters.jpg");
 
 	// set spritesheet clips
 	pacmanClips[0].x = 0;
 	pacmanClips[0].y = 0;
-	pacmanClips[0].w = PACMAN_WIDTH;
-	pacmanClips[0].h = PACMAN_HEIGHT;
+	pacmanClips[0].w = 120;
+	pacmanClips[0].h = 120;
 
-	pacmanClips[1].x = 160;
+	pacmanClips[1].x = 140;
 	pacmanClips[1].y = 0;
-	pacmanClips[1].w = PACMAN_WIDTH;
-	pacmanClips[1].h = PACMAN_HEIGHT;
+	pacmanClips[1].w = 120;
+	pacmanClips[1].h = 120;
 
-	pacmanClips[2].x = 0;
+	pacmanClips[2].x = 140;
 	pacmanClips[2].y = 0;
-	pacmanClips[2].w = PACMAN_WIDTH;
-	pacmanClips[2].h = PACMAN_HEIGHT;
+	pacmanClips[2].w = 120;
+	pacmanClips[2].h = 120;
 
-	pacmanClips[3].x = 0;
+	pacmanClips[3].x = 140;
 	pacmanClips[3].y = 0;
-	pacmanClips[3].w = PACMAN_WIDTH;
-	pacmanClips[3].h = PACMAN_HEIGHT;
+	pacmanClips[3].w = 120;
+	pacmanClips[3].h = 120;
+
+	pacmanClips[4].x = 140;
+	pacmanClips[4].y = 0;
+	pacmanClips[4].w = 120;
+	pacmanClips[4].h = 120;
+
+	pacmanClips[5].x = 140;
+	pacmanClips[5].y = 0;
+	pacmanClips[5].w = 120;
+	pacmanClips[5].h = 120;
 
 }
 
