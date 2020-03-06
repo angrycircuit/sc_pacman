@@ -1,0 +1,9 @@
+Assigned Hitboxes to a few walls
+
+The histboxes are very buggy and can be ignored depending on the angle pacman goes against it, needs polishing
+The main function has all the pixels used to declare walls for testing's sake, but they should be moved to a header file soon
+The function checking if pacman has hit the wall is the move on functions.c, also did that for testing's sake if possible should be also moved to be its own function
+
+The numbers on the CantPass variable are the pixels that the walls are (roughly) changing those values will move the hitboxes around
+If you feel that a change you made is not getting picked up, please check the scanning logic on the move functions located on functions.c
+I will upload a fully commented version of the code soon.
