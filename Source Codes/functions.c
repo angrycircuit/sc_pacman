@@ -14,6 +14,20 @@ void free(SDL_Texture* texture)
 	}
 }
 
+// set objects' initial position, and their hitboxes' size
+void initMoveInfo(struct ObjectMoveInfo* object, int posx, int posy, int width, int height)
+{
+    object->posx = posx;
+    object->posy = posy;
+    object->velx = 0;
+    object->vely = 0;
+    object->degree = 0;
+    object->hitBox.x = 0;
+    object->hitBox.y = 0;
+    object->hitBox.w = width;
+    object->hitBox.h = height;
+}
+
 // load from spritesheet, erase black, and return the content
 SDL_Texture* loadFromFile(SDL_Renderer* renderer, char* address[])
 {
@@ -35,18 +49,18 @@ SDL_Texture* loadFromFile(SDL_Renderer* renderer, char* address[])
 }
 
 // change the speed in each axis when a specific key pressed
-void handleEvent(struct ObjectMoveInfo* object, SDL_Event* e)
+void handleEvent(struct ObjectMoveInfo* object, SDL_Event* event)
 {
     // if a key is pressed down
-    if ((*e).type == SDL_KEYDOWN && (*e).key.repeat == 0)
+    if ((*event).type == SDL_KEYDOWN && (*event).key.repeat == 0)
     {
         // change speed in each axis
-        switch ((*e).key.keysym.sym)
+        switch ((*event).key.keysym.sym)
         {
-        case SDLK_UP: object->vely = -VELOCITY; object->velx = 0; break;
-        case SDLK_DOWN: object->vely = VELOCITY; object->velx = 0; break;
-        case SDLK_LEFT: object->velx = -VELOCITY; object->vely = 0; break;
-        case SDLK_RIGHT: object->velx = VELOCITY; object->vely = 0; break;
+        case SDLK_UP: object->vely = -VELOCITY; object->velx = 0; object->degree = 0; break;
+        case SDLK_DOWN: object->vely = VELOCITY; object->velx = 0; object->degree = 180; break;
+        case SDLK_LEFT: object->velx = -VELOCITY; object->vely = 0; object->degree = -90; break;
+        case SDLK_RIGHT: object->velx = VELOCITY; object->vely = 0; object->degree = 90; break;
         }
     }
 }
