@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNGINGS
+#define _CRT_SECURE_NO_WARNINGS
 
 #include <SDL.h>
 #include <SDL_image.h>

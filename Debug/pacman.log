@@ -1,7 +1,2 @@
-﻿  pacman.c
-C:\projects\sc_pacman-Leon\Include\declaration.h(26,31): warning C4028: formal parameter 1 different from declaration
-C:\projects\sc_pacman-Leon\Include\declaration.h(26,31): warning C4273: 'free': inconsistent dll linkage
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\corecrt_malloc.h(85,14): message : see previous definition of 'free'
-C:\projects\sc_pacman-Leon\Source Codes\pacman.c(122,78): warning C4047: 'function': 'char **' differs in levels of indirection from 'char [35]'
-C:\projects\sc_pacman-Leon\Source Codes\pacman.c(122,78): warning C4024: 'loadFromFile': different types for formal and actual parameter 2
-  pacman.vcxproj -> C:\projects\sc_pacman-Leon\Debug\pacman.exe
+﻿     Creating library C:\Users\liam\OneDrive\Documents\GitHub\sc_pacman\Debug\pacman.lib and object C:\Users\liam\OneDrive\Documents\GitHub\sc_pacman\Debug\pacman.exp
+  pacman.vcxproj -> C:\Users\liam\OneDrive\Documents\GitHub\sc_pacman\Debug\pacman.exe
