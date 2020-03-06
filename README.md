@@ -83,8 +83,8 @@ A super basic version has been created, which includes:
 	- use rotation and flipping function	**✓**
 - Draw pictures
 	- draw a better pacman picture	**✓**
-	- draw ghosts' pictures	**✓**
-	- draw dots' pictures	**✓**
+	- draw ghosts' pictures and render them	**✓**
+	- draw dots' pictures **✓** and render them	
 	- draw fruits (optional)
 - Set the boundary
 	- set the wall and make the collision detection function work
