@@ -80,7 +80,7 @@ A super basic version has been created, which includes:
 ##### Further Improvement
 - Refine comments	**✓**
 - Fix the facing direction when pacman move to another direction
-	- use rotation and flipping function
+	- use rotation and flipping function	**✓**
 - Draw pictures
 	- draw a better pacman picture
 	- draw ghosts' pictures
