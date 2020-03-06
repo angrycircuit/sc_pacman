@@ -82,9 +82,9 @@ A super basic version has been created, which includes:
 - Fix the facing direction when pacman move to another direction
 	- use rotation and flipping function	**✓**
 - Draw pictures
-	- draw a better pacman picture
-	- draw ghosts' pictures
-	- draw dots' pictures
+	- draw a better pacman picture	**✓**
+	- draw ghosts' pictures	**✓**
+	- draw dots' pictures	**✓**
 	- draw fruits (optional)
 - Set the boundary
 	- set the wall and make the collision detection function work
