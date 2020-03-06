@@ -2,6 +2,10 @@
 #include <SDL_image.h>
 #include <stdio.h>
 #include <string.h>	
+#include <stdlib.h>
+#include <Windows.h>
+#include <MMSystem.h>
+#include <conio.h>
 #include "declaration.h"
 
 // release the resource
@@ -132,4 +136,145 @@ int checkCollision(SDL_Rect a, SDL_Rect b)
 
     // if none of the sides from A are outside B
     return 1;
+}
+
+//Function for playing audio, accepts the file name as an arguement
+void Audio(LPCWSTR filename)
+{
+	PlaySound((filename), NULL, SND_SYNC);
+
+	system("pause");
+}
+
+
+// Function for playback of ASCII animation frames
+void Animation(const char* filename)
+{
+#define CHUNK 1024 // Buffer size
+	char buf[CHUNK];
+	FILE* file;
+	size_t nread;
+	file = fopen(filename, "r");
+	if (file)
+	{
+		while ((nread = fread(buf, 1, sizeof buf, file)) > 0)
+			fwrite(buf, 1, nread, stdout);
+		if (ferror(file))
+		{
+			printf("%s not found.", filename);
+		}
+		fclose(file);
+	}
+	Sleep(10);
+	system("cls");
+}
+
+//Function for triggering the introduction sequence
+void Introduction(void)
+{
+#define CHUNK 1024
+	char buf[CHUNK];
+	FILE* file;
+	size_t nread;
+
+	PlaySound(TEXT("PAC DEATH.wav"), NULL, SND_SYNC);
+
+	// Show the ASCII pacman from file
+	file = fopen("pm.txt", "r");
+	if (file)
+	{
+		while ((nread = fread(buf, 1, sizeof buf, file)) > 0)
+			fwrite(buf, 1, nread, stdout);
+		if (ferror(file))
+		{
+			printf("pm.txt not found.");
+		}
+		fclose(file);
+	}
+	PlaySound(TEXT("IPC PACMAN THEME MASTER.wav"), NULL, SND_SYNC);
+	system("cls");
+
+	PlaySound(TEXT("BOOP 2.wav"), NULL, SND_SYNC);
+
+	// Show the credits info from file
+	file = fopen("credits.txt", "r");
+	if (file)
+	{
+		while ((nread = fread(buf, 1, sizeof buf, file)) > 0)
+			fwrite(buf, 1, nread, stdout);
+		if (ferror(file))
+		{
+			printf("credits.txt not found.");
+		}
+		fclose(file);
+	}
+	Sleep(5000);
+	system("cls");
+
+	// Show the PacMan Animation from frames
+	int i;
+	for (i = 0; i < 4; i++)
+	{
+		Animation("pacani1.txt");
+		Animation("pacani2.txt");
+		Animation("pacani3.txt");
+		Animation("pacani4.txt");
+		Animation("pacani5.txt");
+		Animation("pacani6.txt");
+		Animation("pacani7.txt");
+		Animation("pacani8.txt");
+		Animation("pacani9.txt");
+		Animation("pacani10.txt");
+		Animation("pacani11.txt");
+		Animation("pacani12.txt");
+	}
+}
+
+// Soundtest Mode, logic for selecting which sound to play
+void SoundTest(void)
+{
+	int option = 0;
+	while (option == 0)
+	{
+		system("cls");
+		printf("Welcome to the Sound Test Mode\nSelect a sound to play.\n");
+		printf("MUSIC\n1 - IPC Pac Man Theme\n");
+		printf("\n");
+		printf("SFX\n");
+		printf("2 - Boop 1\n3 - Boop 2\n4 - Boop 3\n5 - Pac Man: dies\n");
+		printf("99 - Quit Sound Test\n");
+		printf("Please make your selection: ");
+		scanf("%d", &option);
+		system("cls");
+		if (option == 1)
+		{
+			printf("IPC Pac Man Theme");
+			PlaySound(TEXT("IPC PACMAN THEME MASTER.wav"), NULL, SND_SYNC);
+		}
+		if (option == 2)
+		{
+			printf("Boop 1");
+			PlaySound(TEXT("BOOP 1.wav"), NULL, SND_SYNC);
+		}
+		if (option == 3)
+		{
+			printf("Boop 2");
+			PlaySound(TEXT("BOOP 2.wav"), NULL, SND_SYNC);
+		}
+		if (option == 4)
+		{
+			printf("Boop 3");
+			PlaySound(TEXT("BOOP 3.wav"), NULL, SND_SYNC);
+		}
+		if (option == 5)
+		{
+			printf("Pac Man: Dies");
+			PlaySound(TEXT("PAC DEATH.wav"), NULL, SND_SYNC);
+		}
+		if (option == 99)
+		{
+			return;
+		}
+		option = 0;
+	}
 }
