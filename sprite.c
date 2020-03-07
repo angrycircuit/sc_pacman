@@ -1,0 +1,1 @@
+/* this is for displaying the pacman and monster sprite */

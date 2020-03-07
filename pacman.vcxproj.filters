@@ -20,15 +20,33 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source Codes\functions.c">
+    <ClCompile Include="Source Codes\pacman.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Source Codes\pacman.c">
+    <ClCompile Include="grid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sprite.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sound.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="intro.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source Codes\input_event.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ghost.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="display_map.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Include\declaration.h">
+    <ClInclude Include="Include\pacman.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

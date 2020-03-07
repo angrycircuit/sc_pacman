@@ -22,17 +22,24 @@
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source Codes\functions.c" />
+    <ClCompile Include="ghost.c" />
+    <ClCompile Include="intro.c" />
+    <ClCompile Include="display_map.c" />
+    <ClCompile Include="grid.c" />
+    <ClCompile Include="sound.c" />
+    <ClCompile Include="Source Codes\input_event.c" />
     <ClCompile Include="Source Codes\pacman.c" />
+    <ClCompile Include="sprite.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Include\declaration.h" />
+    <ClInclude Include="Include\pacman.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{645BE62E-826D-40B5-B5DA-86954F1FAA1C}</ProjectGuid>
     <RootNamespace>pacman</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>pacman</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
