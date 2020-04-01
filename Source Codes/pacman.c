@@ -2,37 +2,22 @@
 
 #include "pacman.h"
 
-// function declaration
-int init();
-void loadMedia();
-void close();
-
-// global definitions below
-
-// each object's position, speed, and its hitbox's position and speed
-struct ObjectMoveInfo objectMoveInfo[CHARACTER_NUMBER];
-
+extern SDL_Window* gWindow;
+extern SDL_Renderer* gRenderer;
+extern SDL_Texture* background;
+extern SDL_Texture* charactersTexture;
+extern struct ObjectMoveInfo objectMoveInfo[CHARACTER_NUMBER];
 
 // SDL regulates the parameters of main must be like this
 int main(int argc, char* args[])
 {
-	init();
-	loadMedia();
-	int quit = 0;
+	init(&objectMoveInfo);
 
-	//Event handler
-	SDL_Event e;
-
-	// current frame
-	int frame = 0;
-
-	//Set the wall
-	/*SDL_Rect wall;
-	wall.x = 300;
-	wall.y = 40;
-	wall.w = 40;
-	wall.h = 400;*/
+	SDL_Event e;		//Event handler
+	int couter = 0;		// loop couter
+	int quit = 0;		// termination flag
 	
+
 	// main loop
 	while (!quit)
 	{
@@ -47,12 +32,20 @@ int main(int argc, char* args[])
 			handleEvent(&objectMoveInfo, &e);
 		}
 
-		update(&objectMoveInfo, frame);
+		// every 4 loops animation change once
+		++couter;
+		if (couter / 6 >= PACMAN_ANIMATION_FRAMES)
+			couter = 0;
 
+		// behaviors of eating / catching
+		updateWithoutInput();
+
+		// refresh the display every loop
+		update(&objectMoveInfo, couter);
 	}
 
 	//Free resources and close SDL
-	close();
+	close(&background, &charactersTexture, &gRenderer, &gWindow);
 
 	return 0;
 }
